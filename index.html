@@ -1,0 +1,59 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <script type="text/javascript>
+    var player1 = "Dan";
+    var score1 = 4200;
+    var handicap1 = 560;
+    
+    var player2 = "Eric";
+    var score2 = 4432;
+    var handicap2 = 340;
+    
+    var player2_greater_handicap;
+    var score_difference = null;
+    var total_handicap = null;
+    var scoring_multiplier = 1.2;
+    var winning_player = '';
+    
+    console.log("Player 1: " + player1 + "\n" + "Player 2: + player2);
+    if(handicap1 >= handicap2){
+      player2_greater_handicap = false;
+      total_handicap = handicap1 - handicap2;
+      var greater_handicap_player = player1;
+    }
+    else {
+      player2_greater_handicap = true;
+      total_handicap = handicap2 - handicap1;
+      var greater_handicap_player = player2;
+    }
+    console.log(greater_handicap_player + " has the greater handicap");
+    
+    var adjusted_player1_score = score1 + handicap1;
+    var adjusted_player2_score = score2 + handicap2;
+    
+    score_difference = Math.abs(adjusted_player2_score - adjusted_player1_score);
+    
+    var earned_points = scoring_multiplier * (total_handicap + 50);
+    
+    if(adjusted_player1_score > adjusted_player2_score){
+        winning_player = player1;
+    }
+    else if(adjusted_player1_score < adjusted_player2_score){
+        winning_player = player2;
+    }
+    else{
+        winning_player = false
+    }
+    
+    if(winning_player !== 0){
+      console.log(winning_player + " is the winning player!");
+    }
+    else{
+      console.log("No one won!");
+    }
+  </script>
+</head>
+<body>
+</body>
+</html>
