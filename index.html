@@ -2,7 +2,7 @@
 <html>
 <head>
   <script type="text/javascript>
-    var player1 = "Dan";
+      var player1 = "Dan";
     var score1 = 4200;
     var handicap1 = 560;
     
@@ -16,7 +16,7 @@
     var scoring_multiplier = 1.2;
     var winning_player = '';
     
-    console.log("Player 1: " + player1 + "\n" + "Player 2: + player2);
+    console.log("Player 1: " + player1 + "\n" + "Player 2: " + player2);
     if(handicap1 >= handicap2){
       player2_greater_handicap = false;
       total_handicap = handicap1 - handicap2;
@@ -45,13 +45,13 @@
     else{
         winning_player = false
     }
-    
     if(winning_player !== 0){
-      console.log(winning_player + " is the winning player!");
+      console.log(winning_player + " is the winning player with " + score_difference + " more!");
     }
     else{
       console.log("No one won!");
     }
+ 
   </script>
 </head>
 <body>
